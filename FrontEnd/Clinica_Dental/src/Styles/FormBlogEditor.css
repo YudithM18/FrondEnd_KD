@@ -1,0 +1,250 @@
+/* Estilo para el contenedor de consejos */
+.contenedor_Tips {
+  background: linear-gradient(135deg, #4a8e58e7, #354d38); /* Degradado verde más oscuro */
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4); /* Sombras más oscuras */
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+  margin: 150px auto 0 auto; /* Centrado con margen automático */
+}
+
+/* Estilo para el contenedor de video blog */
+.contenedorVideoBlog {
+  background: linear-gradient(135deg, #dbb288, #a77a48); /* Degradado con tonos más claros de café */
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Sombra más suave */
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+  margin: 150px auto 0 auto; /* Centrado con margen automático */
+}
+
+
+/* Estilo para los botones agregar (Tips) */
+.btnAgregarT, .btnAgregarV {
+  background-color: #82DE95;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 5px 0;
+  animation: popIn 0.5s ease;
+  margin-left: auto;
+  margin-right: auto; /* Botón centrado */
+  display: block; /* Asegura que el botón se comporte como bloque */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra negra para el botón */
+}
+
+/* Estilo para los subtítulos */
+.subtitulo {
+  color: white;
+  font-size: 20px;
+  text-align: start;
+}
+
+.inputFile{
+  background-color: #f4f4f4; /* Fondo gris claro */
+  border: 1px solid #ccc; /* Borde gris suave */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px 12px; /* Espaciado dentro del input */
+  width: 90%; /* Ancho completo */
+  font-size: 1rem; /* Tamaño de fuente */
+  transition: all 0.3s ease; /* Transición suave */
+  margin-bottom: 15px; /* Espacio debajo de cada input */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para profundidad */
+}
+
+/* Estilo para los campos de entrada (inputs) */
+.input, .input2 {
+    background-color: #f4f4f4; /* Fondo gris claro */
+    border: 1px solid #ccc; /* Borde gris suave */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 12px 15px; /* Espaciado dentro del input */
+    width: 100%; /* Ancho completo */
+    font-size: 1rem; /* Tamaño de fuente */
+    transition: all 0.3s ease; /* Transición suave */
+    margin-bottom: 15px; /* Espacio debajo de cada input */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para profundidad */
+}
+
+/* Efecto cuando el input está en foco */
+.input:focus, .input2:focus {
+    border-color: #888; /* Gris oscuro cuando está enfocado */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Resaltado suave con sombra */
+    outline: none; /* Quitar el borde de foco predeterminado */
+}
+
+/* Efecto cuando el input tiene texto (se llena) */
+.input:not(:placeholder-shown), .input2:not(:placeholder-shown) {
+    background-color: #fff; /* Fondo blanco cuando hay texto */
+    border-color: #888; /* Gris más oscuro */
+}
+
+/* Estilo para los inputs deshabilitados */
+.input:disabled, .input2:disabled {
+    background-color: #e0e0e0; /* Gris claro para los inputs deshabilitados */
+    border-color: #ccc; /* Gris suave */
+    color: #999; /* Color gris para el texto */
+    cursor: not-allowed; /* Cursor de no permitido */
+}
+
+/* Placeholder (texto de ejemplo) */
+.input::placeholder, .input2::placeholder {
+    color: #aaa; /* Color gris suave para el texto del placeholder */
+    font-style: italic; /* Estilo cursivo para los placeholders */
+}
+
+/* Estilo para el contenedor de los inputs */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Contenedor a ancho completo */
+    margin-bottom: 20px; /* Espacio entre inputs */
+}
+
+/* Estilo adicional para los inputs al pasar el ratón (hover) */
+.input:hover, .input2:hover {
+    border-color: #666; /* Gris oscuro al pasar el ratón */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Sombra ligera en hover */
+}
+
+
+/* Estilo para el título de la sección */
+.sectionTitle {
+  font-size: 2em;
+  text-align: center;
+  color: #2c3e50; /* Color gris oscuro */
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Contenedor principal de los consejos */
+.containerTips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  font-family: 'Averia Serif Libre';
+  font-size: 120%;
+  color: black;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilo de cada consejo */
+.tipList {
+  list-style-type: none;
+  padding: 0;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tipItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #e0dedd;
+  color: black;
+  gap: 20px;
+  text-align: left;
+  animation: fadeIn 0.6s ease-in-out; /* Animación de aparición */
+}
+
+/* Columna de datos (título, imagen, descripción) */
+.tipDataColumn {
+  width: 45%; /* 45% del ancho */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Columna de edición (inputs y botones) */
+.tipEditColumn {
+  width: 45%; /* 45% del ancho */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Estilo de los inputs */
+.tipInput, .tipTitleInput {
+  background-color: #FFC6E5;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Botones */
+.tipButton {
+  background-color: #FD91CB; /* Botón rosa */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 5px 0;
+}
+
+.tipButton:hover {
+  background-color: #AB5684; /* Cambio de color al hacer hover */
+}
+
+/* Animaciones de entrada */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .tipItem {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .tipDataColumn, .tipEditColumn {
+      width: 100%;
+  }
+
+  .tipInput, .tipTitleInput {
+      font-size: 14px;
+  }
+
+  .tipButton {
+      font-size: 14px;
+  }
+
+  /* Ajuste del contenedor de consejos */
+  .contenedor_Tips, .contenedorVideoBlog {
+    margin-top: 20px; /* Reducir margen superior en pantallas pequeñas */
+    padding: 20px;
+    max-width: 100%; /* Usar el 100% del ancho disponible */
+  }
+}

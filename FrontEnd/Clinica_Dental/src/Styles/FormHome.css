@@ -1,0 +1,207 @@
+/* Estilos para el carrusel de imágenes */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 50px;
+  border-radius: 10px;  /* Bordes redondeados */
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image-container {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Asegura que las imágenes no se deformen */
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.historialT{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  margin-top: 90px;
+}
+
+.testimonial-carousel {
+  margin-top: 100px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonial-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-item {
+  min-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.testimonial-item p {
+  margin: 10px 0;
+}
+
+/* Flechas */
+.testimonial-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;  /* Asegura que las flechas estén por encima del contenido */
+  font-size: 2rem;
+}
+
+.testimonial-btn.prev {
+  left: -30px; /* Ubica la flecha izquierda fuera del contenedor */
+}
+
+.testimonial-btn.next {
+  right: -30px; /* Ubica la flecha derecha fuera del contenedor */
+}
+
+.testimonial-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* Estilo base para el título */
+.reenderizados-Especialistas {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  margin-top: 150px;
+}
+
+/* Contenedor de especialistas */
+.workTeam-conteiner-especialistas {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para la lista de especialistas (disposición en 3 columnas en pantallas grandes y 1 columna en móviles) */
+.mapEspecialistasReenderizados {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid; /* Usamos grid para organizar los elementos */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 3 columnas en pantallas grandes y 1 en móviles */
+  gap: 20px; /* Espaciado entre cada elemento */
+}
+
+/* Estilo para cada card de especialista */
+.listas-de-especialistas {
+  background-color: #D0D1CE; /* Color de fondo */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease;
+  text-align: center; /* Centra el contenido del card */
+}
+
+/* Imagen del especialista */
+.imgRecidReendEspecialis {
+  width: 120px; /* Tamaño fijo para la imagen */
+  height: 120px; /* Mismo tamaño que el ancho para mantener la forma redonda */
+  border-radius: 50%; /* Hace la imagen redonda */
+  object-fit: cover; /* Asegura que la imagen se recorte bien para llenar el círculo */
+  border: 5px solid white; /* Borde blanco alrededor de la imagen */
+  margin: 0 auto; /* Centra la imagen dentro del contenedor */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de la imagen */
+}
+
+/* Nombre del especialista */
+.especialista-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Información del especialista */
+.especialista-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Estilo para especialidad */
+.especialidad {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Estilo para titulación */
+.titulation {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Efecto de hover en los cards */
+.listas-de-especialistas:hover {
+  transform: scale(1.05);
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .mapEspecialistasReenderizados {
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+  }
+
+  .reenderizados-Especialistas {
+    font-size: 1.8rem; /* Reducir tamaño del título en móviles */
+  }
+}

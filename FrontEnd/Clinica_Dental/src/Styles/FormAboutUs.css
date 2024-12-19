@@ -1,0 +1,118 @@
+/* Estilo general para la sección .info */
+.info {
+  background-color: #7D848C;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  animation: fadeIn 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start; /* Alineación de los elementos al inicio */
+  justify-content: flex-start;
+}
+
+/* Estilo para las secciones mision, vision y colaboradores */
+.mision, .vision, .colaboradores {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: relative; /* Para permitir las pseudoclases ::before y ::after */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de hover para mision, vision y colaboradores */
+.mision:hover, .vision:hover, .colaboradores:hover {
+  transform: translateY(-10px); /* Eleva la carta */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Pseudoclases ::before y ::after para la animación de las líneas */
+.mision::before,
+.mision::after,
+.vision::before,
+.vision::after,
+.colaboradores::before,
+.colaboradores::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  background: linear-gradient(90deg, hsl(351, 50%, 46%), hsl(351, 100%, 76%));
+  transition: width 0.5s ease;
+}
+
+/* Línea inferior para todas las secciones (mision, vision, colaboradores) */
+.mision::before,
+.vision::before,
+.colaboradores::before {
+  left: 0;
+  bottom: 0;
+  width: 0; /* Comienza oculta */
+}
+
+/* Línea superior siempre visible para todas las secciones */
+.mision::after,
+.vision::after,
+.colaboradores::after {
+  right: 0;
+  top: 0;
+  width: 100%; /* Siempre visible en la parte superior */
+  transition: width 0.5s ease;
+}
+
+/* Mostrar la línea inferior al hacer hover */
+.mision:hover::before,
+.vision:hover::before,
+.colaboradores:hover::before {
+  width: 100%; /* Llenar la línea inferior al hacer hover */
+}
+
+/* Ocultar la línea superior al hacer hover */
+.mision:hover::after,
+.vision:hover::after,
+.colaboradores:hover::after {
+  width: 0; /* La línea superior desaparece al hacer hover */
+  animation: slideIn 0.5s forwards; /* Animación de entrada */
+}
+
+/* Estilo de los títulos h3 y h4 */
+h3 {
+  color: hsl(351, 100%, 76%);
+  font-family: 'Arial', sans-serif;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+h4 {
+  color: #555;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Animación de fadeIn */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Animación de fadeInUp para efectos de aparición desde abajo */
+@keyframes fadeInUp {
+  from {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}

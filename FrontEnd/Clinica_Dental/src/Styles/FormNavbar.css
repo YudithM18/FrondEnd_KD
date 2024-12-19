@@ -1,0 +1,210 @@
+/* Estilo base para la navbar */
+.navbar {
+  background-color: #CECFCA;
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-toggle{
+  color: #CECFCA;
+}
+
+/* Logo */
+.navbar-logo {
+  color: rgb(44, 44, 44);
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo i {
+  margin-right: 10px;
+}
+
+/* Menú de navegación */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.navbar-item {
+  margin-left: 30px;
+}
+
+.navbar-link {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s, filter 0.3s ease-in-out;
+  position: relative;
+  display: inline-block;
+  border-radius: 7px;
+}
+
+/* Efecto hover sobre los enlaces */
+.navbar-link:hover {
+  color: #1a7030;
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.3);
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #388E3C, #66BB6A);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+/* Estilo base de los botones */
+.nav-btnEnglish, .nav-btnEspañol {
+  background-color: #be8484; /* Color de fondo verde */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: 600; /* Peso de la fuente */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 30px; /* Bordes redondeados */
+  cursor: pointer; /* Indicador de que el botón es interactivo */
+  transition: all 0.3s ease; /* Transición suave para todos los cambios */
+  margin: 0 10px; /* Espaciado entre los botones */
+}
+
+/* Hover para los botones */
+.nav-btnEnglish:hover, .nav-btnEspañol:hover {
+  background-color: #f0adad; /* Cambio de color a verde más claro */
+  transform: scale(1.05); /* Agrandar ligeramente el botón */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Añadir sombra sutil */
+}
+
+/* Efecto activo cuando el botón es presionado */
+.nav-btnEnglish:active, .nav-btnEspañol:active {
+  transform: scale(1); /* Mantener el tamaño original cuando se presiona */
+  box-shadow: none; /* Eliminar la sombra activa */
+  background-color: #ffd1d1; /* Cambio de color a un verde más oscuro */
+}
+
+/* Estilos para la versión en español */
+.nav-btnEspañol {
+  background-color: #f8c009ad; /* Fondo azul */
+}
+
+/* Hover para la versión en español */
+.nav-btnEspañol:hover {
+  background-color: #ffd446ad; /* Azul más claro al hacer hover */
+}
+
+/* Efecto activo para la versión en español */
+.nav-btnEspañol:active {
+  background-color: #f8c009ad; /* Azul más oscuro al presionar */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Ocultar el menú en pantallas pequeñas por defecto */
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #1e1e1e;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  /* Mostrar el menú cuando tiene la clase active */
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  /* Estilo de los elementos del menú */
+  .navbar-item {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* Estilo del ícono de hamburguesa */
+  .navbar-toggle {
+    display: block;
+    font-size: 22px;
+    color: #242222;
+    cursor: pointer;
+  }
+
+  /* Estilos para los botones de idioma */
+  .nav-btnEnglish, .nav-btnEspañol {
+    background-color: #be8484;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+  }
+
+  .nav-btnEnglish:hover, .nav-btnEspañol:hover {
+    background-color: #f0adad;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-btnEnglish:active, .nav-btnEspañol:active {
+    transform: scale(1);
+    box-shadow: none;
+    background-color: #ffd1d1;
+  }
+
+  /* Estilo para el botón en español */
+  .nav-btnEspañol {
+    background-color: #f8c009ad;
+  }
+
+  .nav-btnEspañol:hover {
+    background-color: #ffd446ad;
+  }
+
+  .nav-btnEspañol:active {
+    background-color: #f8c009ad;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

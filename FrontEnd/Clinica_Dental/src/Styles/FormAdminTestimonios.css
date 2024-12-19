@@ -1,0 +1,195 @@
+/* Estilo para el contenedor principal del formulario */
+.Testimonios {
+  background: #7D566B; /* Fondo color pastel */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 600px; /* Limitar el tamaño máximo del formulario */
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+  margin: 150px auto; /* Centrado vertical con margen superior y auto para centrado horizontal */
+}
+
+/* Título */
+.Title {
+  color: white; 
+  margin-bottom: 20px;
+  animation: slideIn 0.5s ease-in-out;
+  font-size: 35px;
+}
+
+/* Subtítulo */
+.subTitle {
+  color: white;
+  font-size: 20px;
+  text-align: start;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Estilo para los inputs de texto y fecha */
+input[type="text"], input[type="date"] {
+  width: calc(100% - 20px); /* Ancho completo menos padding */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto al hacer foco en los inputs */
+input[type="text"]:focus, input[type="date"]:focus {
+  border-color: #8a4f44;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo para el botón de agregar */
+.btnagregar {
+  background-color: #ffc4e4c2;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 5px 0;
+  animation: popIn 0.5s ease;
+}
+
+.btnagregar:hover {
+  background-color: #E4C5D6;
+  transform: scale(1.05);
+}
+
+/* Estilo para las tarjetas de testimonios */
+.testimonios {
+  list-style-type: none;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  background-color: #e0dedd;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 80%;
+  text-align: left;
+  animation: fadeIn 0.6s ease-in-out;
+  margin: 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonios:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Contenedor para los testimonios */
+.mapTestimonios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  font-family: 'Averia Serif Libre';
+  font-size: 120%;
+  color: black;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
+  width: 85%;
+  margin: 30px auto;
+}
+
+/* Columnas de los testimonios */
+.data-column, .edit-column {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 20px;
+}
+
+.editInp {
+  background-color: #cec1c8;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Botón para la historia */
+.botonHisT {
+  background-color: #d3b2db;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 10px 0;
+}
+
+.botonHisT:hover {
+  background-color: #635562;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Medios para pantallas pequeñas */
+@media (max-width: 768px) {
+  .Testimonios {
+      margin: 150px 20px; /* Márgenes pequeños en pantallas pequeñas */
+  }
+
+  .testimonios {
+      flex-direction: column;
+      width: 95%; /* Ancho mayor en pantallas pequeñas */
+      gap: 20px;
+  }
+
+  .data-column, .edit-column {
+      width: 100%; /* Las columnas ocupan el 100% del ancho */
+      padding: 0;
+  }
+
+  .editInp {
+      font-size: 14px;
+  }
+
+  .botonHisT {
+      font-size: 14px;
+  }
+}

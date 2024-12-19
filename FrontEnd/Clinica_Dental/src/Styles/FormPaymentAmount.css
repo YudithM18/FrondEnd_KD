@@ -1,0 +1,203 @@
+/* Estilos generales de la página */
+body.fondo-formulario {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #66aae6; /* O el color que prefieras */
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin: 20px auto;
+    height: 500px;
+    padding: 20px;
+    background-color: #ffeb3b; /* Amarillo pastel */
+    background-image: url('../Img/formulario.jpg'); /* Un fondo tierno, opcional */
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 1.5s ease-in-out; /* Animación al cargar la página */
+}
+
+/* Contenedor del formulario */
+.form-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    animation: slideIn 1s ease-out;
+}
+
+.titulo-ingresar {
+    font-size: 2rem;
+    color: #ff4081; /* Rosa brillante */
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: bounce 1s infinite;
+}
+
+/* Animaciones para el título */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Estilos de los campos de entrada */
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-field-monto {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 2px solid #ff4081;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-field-monto:focus {
+    border-color: #00e676;
+    box-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
+}
+
+/* Botón de envío */
+.submit-btn {
+    background-color: #00e676; /* Verde claro */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ff4081;
+}
+
+.back-button-donar{
+    height: 30px;
+    width: 80px;
+    margin-right: 1170px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .back-button-donar {
+    background-color: #00e676; /* Verde claro */
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button-donar:hover {
+    background-color: #ff4081;
+  }
+
+
+/* Animación de la forma */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para iconos de ayuda (opcional) */
+.icon {
+    font-size: 2rem;
+    color: #ff4081;
+    margin: 10px;
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%; /* El formulario se ajusta a un 90% del ancho */
+        height: auto; /* Permite que el alto sea flexible */
+        padding: 10px; /* Menos padding para pantallas pequeñas */
+    }
+
+    .form-content {
+        padding: 15px; /* Menos padding para pantallas pequeñas */
+        max-width: 100%; /* Permite que ocupe todo el espacio disponible */
+    }
+
+    .titulo-ingresar {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+    }
+
+    .input-field-monto {
+        font-size: 1rem; /* Reduce el tamaño de la fuente en los inputs */
+    }
+
+    .submit-btn {
+        padding: 12px 24px; /* Ajusta el padding del botón */
+        font-size: 1rem; /* Reduce el tamaño del texto */
+    }
+
+    .back-button-donar {
+        width: 100%; /* Asegura que el botón ocupe todo el ancho */
+        margin-right: 0; /* Elimina el margen */
+        padding: 12px 0; /* Ajusta el padding del botón */
+        font-size: 1rem; /* Reduce el tamaño del texto */
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+    .form-container {
+        width: 80%; /* Ajusta el tamaño del formulario */
+    }
+
+    .form-content {
+        padding: 20px; /* Aumenta un poco el padding */
+    }
+
+    .titulo-ingresar {
+        font-size: 1.8rem; /* Ajusta el tamaño del título */
+    }
+
+    .submit-btn {
+        padding: 15px 30px;
+    }
+
+    .back-button-donar {
+        padding: 12px 0; /* Ajusta el tamaño del botón */
+    }
+}
+
+/* Pantallas grandes (desktops y más grandes) */
+@media (min-width: 1200px) {
+    .form-container {
+        width: 50%; /* Ajusta el tamaño del formulario para pantallas grandes */
+    }
+
+    .form-content {
+        max-width: 500px; /* Aumenta el tamaño máximo del formulario */
+    }
+
+    .submit-btn {
+        padding: 18px 36px; /* Aumenta el tamaño del botón */
+    }
+
+    .back-button-donar {
+        width: auto; /* Ajusta el tamaño del botón */
+        padding: 14px 28px; /* Ajusta el padding */
+    }
+}
